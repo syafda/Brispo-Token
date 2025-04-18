@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brispor Utility Token (BSPR)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ffa500;
+    }
+    h2 {
+      color: #ffa500;
+    }
+    .btn {
+      background-color: #ffa500;
+      color: #0f0f0f;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      margin: 1rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .roadmap li {
+      margin-bottom: 0.5rem;
+    }
+    .footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Brispor Utility Token (BSPR)</h1>
+    <p>Fueling a Sustainable Crypto Economy</p>
+    <button class="btn">Buy Token</button>
+    <button class="btn">Join Community</button>
+    <div class="countdown" id="countdown"></div>
+  </header>
+
+  <section>
+    <h2>About BSPR</h2>
+    <p>BSPR is the core token of the Brispor ecosystem, designed to drive real-world value through sustainability, energy innovation, and investor-focused growth. With layered security and a fixed supply, BSPR empowers the next wave of decentralized energy platforms.</p>
+  </section>
+
+  <section>
+    <h2>Tokenomics</h2>
+    <ul>
+      <li><strong>Total Supply:</strong> 100,000,000 BSPR</li>
+      <li><strong>70% Utility Use:</strong> Platform features, rewards, governance</li>
+      <li><strong>30% Investors:</strong> Strategic distribution, staking pool, liquidity</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Roadmap</h2>
+    <ul class="roadmap">
+      <li>📍 Q2 2025: Token Launch & Initial Listings</li>
+      <li>🔗 Q3 2025: Ecosystem Integration & DEX Expansion</li>
+      <li>🚀 Q4 2025: Staking, Governance & Real-World Utility Launch</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    &copy; 2025 Brispor Project. All Rights Reserved.
+  </div>
+
+  <script>
+    // Countdown Launch (adjust target date)
+    const launchDate = new Date("2025-05-15T12:00:00Z").getTime();
+    const countdownEl = document.getElementById("countdown");
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+      if (diff <= 0) {
+        countdownEl.innerHTML = "🚀 BSPR is Live!";
+        clearInterval(interval);
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      countdownEl.innerHTML = `🚀 Launching in ${days}d ${hours}h ${minutes}m`;
+    }, 60000);
+  </script>
+</body>
+</html>
